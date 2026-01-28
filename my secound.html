@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Shivu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+        }
+
+        .page {
+            display: none;
+            padding: 50px 20px;
+            min-height: 100vh;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            color: rgb(8, 0, 0);
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+            margin: 8px 0;
+        }
+
+        button {
+            type: button;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 20px;
+            background: #ff4081;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Card */
+        .card {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .gift-photo {
+    display: none;
+    margin-top: 20px;
+    animation: pop 0.6s ease;
+}
+
+.gift-photo img {
+    width: 220px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+        /* Photos */
+        .photos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .photos img {
+            width: 200px;
+            border-radius: 15px;
+        }
+
+        /* Wishes list */
+        .wishes {
+            text-align: left;
+            margin: 20px auto 0 auto;
+            max-width: 500px;
+            font-size: 18px;
+        }
+
+        .wishes p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <div class="card">
+        <h1>🎉✨ Happy Birthday Shivu ✨🎉</h1>
+        
+        <div class="wishes">
+            <p>1. 🌟 Wishing you endless happiness and joy!</p>
+            <p>2. 🌸 May all your dreams come true!</p>
+            <p>3. 🎈 Stay healthy and cheerful always!</p>
+            <p>4. 💖 Lots of love and laughter!</p>
+            <p>5. 🎁 Surprises that make you smile!</p>
+            <p>6. ✨ Shine bright like a star!</p>
+            <p>7. 😄 Enjoy every moment of your day!</p>
+            <p>8. 🍀 Good luck in all your endeavors!</p>
+            <p>9. 🎶 Music, fun, and happiness forever!</p>
+            <p>10. 💕 You are loved more than you know!</p>
+        </div>
+
+        <button type="button" onclick="nextPage(1)">Next ➡</button>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <div class="card">
+        <h1>🎁 Open Your Gift 🎁</h1>
+
+        <div class="gift" id="gift" onclick="openGift()">🎁</div>
+
+        <!-- Photo hidden initially -->
+        <div class="gift-photo" id="giftPhoto">
+            <img src="img/meshivu.jpeg" alt="Surprise">
+        </div>
+
+        <div class="hearts" id="hearts">
+            ❤️ 💖 💕 💘 💗 ❤️
+        </div>
+
+        <button type="button" onclick="nextPage(2)">Next ➡</button>
+    </div>
+</div>
+
+        <!-- <button type="button" onclick="nextPage(2)">Next ➡</button> -->
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <div class="card">
+        <h1>🎈 Memories & Love 🎈</h1>
+        <p>Some beautiful moments just for you 💫</p>
+
+        <div class="photos">
+            <img src="img/shivu.jpeg" alt="Memory 1">
+            <img src="img/WhatsApp Image 2026-01-13 at 3.58.48 PM (1).jpeg" alt="Memory 2">
+            <img src="img/shivu2.jpeg" alt="Memory 3">
+        </div>
+
+        <p>
+            Distance doesn't matter 💖<br>
+            You will always be special ✨
+        </p>
+    </div>
+</div>
+
+<script>
+    function nextPage(page) {
+        const current = document.getElementById("page" + page);
+        const next = document.getElementById("page" + (page + 1));
+        if (current && next) {
+            current.classList.remove("active");
+            next.classList.add("active");
+        }
+    }
+    </script>
+
+    <script>
+          function openGift() {
+    document.getElementById("gift").innerHTML = "🎉";
+    document.getElementById("giftPhoto").style.display = "block";
+    document.getElementById("hearts").style.display = "block";
+}
+</script>
+</script>
+
+
+</body>
+</body>
+</html>
